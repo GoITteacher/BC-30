@@ -1,18 +1,4 @@
-function sortByValueAndIndex(array) {
-  let result = array
-    .map((element, index) => {
-      return {
-        value: element * (index + 1),
-        index,
-      };
-    })
-    .sort((a, b) => a.value - b.value)
-    .map((element) => {
-      return array[element.index];
-    });
-
-  return result;
-}
+function sortByValueAndIndex(array) {}
 
 let array = [1 * 1, 2 * 2, 5 * 3, 1, 7, 9, 4, 1];
 // [1,2, 1, , 5]

@@ -32,9 +32,3 @@
 // ];
 
 // let array = [[2, 6], [1, 5, 8], [2, 1], 23, 61, 56];
-
-// let newArray = objs.flatMap((element) => {
-//   return element.friend;
-// });
-
-// console.log(newArray);

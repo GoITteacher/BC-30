@@ -26,9 +26,3 @@
 // ];
 
 // let str = ["Roman", "Anatoliy", "Anatoliy", "Anatoliy", "Anatoliy"];
-
-// let result = str.findIndex((element) => {
-//   return element[0] === "A";
-// });
-
-// console.log(str);

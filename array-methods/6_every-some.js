@@ -10,7 +10,6 @@
 */
 
 // let array = [0, 0, 0];
-// // console.log(array.every((element) => element / 2 >= 10));
 
 /*
 
@@ -22,4 +21,3 @@
  - Перебирання масиву припиняється, якщо колбек повертає true.
 
 */
-// console.log(array.some((element) => element));

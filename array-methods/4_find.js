@@ -24,7 +24,3 @@
 //     phone: "+280996161",
 //   },
 // ];
-
-// let result = array.find((element) => {
-//   return element.age >= 18;
-// });

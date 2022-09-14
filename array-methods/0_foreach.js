@@ -7,7 +7,3 @@
 */
 
 // let array = [1, 3, 5, 1, 7, 4, 3];
-
-// array.forEach((element, index, array) => {
-//   pushUserToDB(element);
-// });
