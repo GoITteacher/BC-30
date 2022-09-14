@@ -6,4 +6,11 @@
 
 */
 
-// let array = [1, 3, 5, 1, 7, 4, 3];
+// let array = [1, 3, 15, 1, 17, 4, 13];
+// let newArray = [];
+
+// let result = array.forEach((value, index, test) => {
+//   if (value > 10) newArray.push(value);
+// });
+
+// console.log(newArray);

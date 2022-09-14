@@ -31,4 +31,10 @@
 //   },
 // ];
 
-// let array = [[2, 6], [1, 5, 8], [2, 1], 23, 61, 56];
+let array = [[2, 6], [1, [[5]], 8], [2, [1]], [23], 61, 56];
+
+// let result = array.flatMap(value => {
+//   return value;
+// });
+
+// console.log(result);
