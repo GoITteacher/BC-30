@@ -1,4 +1,4 @@
-//Класи
+/* //Класи
 /* 
   -Оголошення класу
   -Конструктор класу
@@ -20,12 +20,7 @@
 
 //Оголошення класу
 
-// class User {
-
-// }
-
-// const mango = new User();
-// console.log(mango); // {}
+// class User {}
 
 // const poly = new User();
 // console.log(poly); // {}
@@ -34,112 +29,111 @@
 
 //Конструктор класу
 
-/* class User {
-  // Синтаксис оголошення методу класу
-  constructor(name, email) {
-    // Ініціалізація властивостей екземпляра
-    this.name = name;
-    this.email = email;
-  }
+// class User {
 
-  printName() {}
-}
+//   name;
 
-const mango = new User("Манго", "mango@mail.com");
-console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
+//   // Синтаксис оголошення методу класу
+//   constructor(name, email) {
+//     // Ініціалізація властивостей екземпляра
+//     this.name = name;
+//     this.email = email;
+//   }
 
-mango.phone;
+// }
 
-const poly = new User("Поли", "poly@mail.com");
-console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
- */
+// const mango = new User('Манго', 'mango@mail.com');
+// console.log(mango); // { name: 'Манго', email: 'mango@mail.com' }
+
+// mango.phone;
+
+// const poly = new User('Поли', 'poly@mail.com');
+// console.log(poly); // { name: 'Поли', email: 'poly@mail.com' }
+
 /* 
 Виклик класу з оператором new призводить до створення нового об'єкта і виклику конструктора в контексті цього об'єкта. Тобто this всередині конструктора буде посилатися на новостворений об'єкт. Це дозволяє додавати кожному об'єкту властивості з однаковими іменами, але різними значеннями.
 */
 
 //Об'єкт параметрів
 
-/* class Car {
-  constructor(speed, model, price, type) {
-    (this.#model = model),
-      (this.#speed = speed),
-      (this.price = price),
-      (this.#type = type);
-  }
+// class Car {
+//   isNew = true;
 
-  #speed;
-  #model;
-  price;
-  #type;
+//   constructor({ speed = '80', model, price = 5000, type }) {
+//     this.model = model;
+//     this.speed = speed;
+//     this.price = price;
+//     this.type = type;
+//   }
 
-  getModel() {
-    console.log(this.#model);
-  }
-}
+//   getModel() {
+//     console.log(this.price);
+//   }
+// }
 
-let car1 = new Car(100, "CR-x", 2000, "sport");
+// const options = {
+//   speed: '80',
+//   model: 'awdaw',
+//   price: 10000000,
+//   type: 'sport',
+// };
 
-car1.getModel(); */
+// let car1 = new Car(options);
+
+// car1.getModel();
+
+// class User {
+//   static counterName = 0;
+//   #name;
+//   constructor(name) {
+//     this.#name = name;
+//   }
+
+//   get name() {
+//     User.counterName++;
+//     console.log(this.#name);
+//     return this.#name;
+//   }
+// }
+
+// let user = new User('Volodka');
+// let user1 = new User('Volodka1');
+// let user2 = new User('Volodka2');
+// let user3 = new User('Volodka3');
+
+// user.name;
+// user1.name;
+// user2.name;
+// user3.name;
+
+// console.log(User.counterName);
+
+// =======================================
 
 class User {
-  #age;
-  name;
-  #phone;
-  email;
-  gender;
+  #number;
+  number;
 
-  static CONST_STAT = {
-    MALE: "male",
-    FEMALE: "female",
-    DEFAULT: "defualt",
-  };
-
-  constructor({ name, age, phone, email, gender }) {
-    this.name = name;
-    if (age > 0) this.#age = age;
-    else this.#age = 0;
-    this.#phone = phone;
-    this.email = email;
-    this.gender = gender;
-  }
-
-  get age() {
-    return `Age - ${this.#age}`;
-  }
-
-  set age(newAge) {
-    if (newAge > this.#age) this.#age = newAge;
-  }
-
-  printUser() {
-    console.log("Name - ", this.name);
-    console.log("Age - ", this.#age);
-    console.log("phone - ", this.#phone);
-    console.log("email - ", this.email);
-    console.log(User.MAX_AGE);
+  getInfo() {
+    console.log(this.#name);
+    console.log(this.name);
   }
 }
 
 class Worker extends User {
-  expiriens;
-  skills;
-
-  constructor(expiriens, skills, userObj) {
-    super(userObj);
-    this.expiriens = expiriens;
-    this.skills = skills;
+  experience;
+  static BaseUser;
+  constructor(exp, name, age, phoneNumber) {
+    super(name, age, phoneNumber);
+    this.experience = exp;
   }
 
-  getexpiriens() {
-    console.log("Exp->", this.expiriens);
+  getExp() {
+    console.log(this.experience);
   }
 }
 
-let userObj = {
-  name: "123",
-  age: 20,
-  gender: User.CONST_STAT.MALE,
-};
+let worker = new Worker(10, 'testName', 20, '00000000');
 
-let user1 = new User(userObj);
-let worker = new Worker(10, [], userObj);
+console.log(worker);
+worker.getExp();

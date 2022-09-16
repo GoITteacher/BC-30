@@ -13,7 +13,7 @@
 
 ## Прототипне наслідування (prototype.js)
 - Прототип об'єкта
-- __proto__
+- \_\_proto\_\_
 - hasOwnProperty()
 
 

@@ -6,15 +6,15 @@
 
 */
 
-const baseSalary = 30000;
-const overtime = 10;
-const rate = 20;
+// const baseSalary = 30000;
+// const overtime = 10;
+// const rate = 20;
 
-const getWage = (baseSalary, overtime, rate) => {
-  return baseSalary + overtime * rate;
-};
+// const getWage = (baseSalary, overtime, rate) => {
+//   return baseSalary + overtime * rate;
+// };
 
-getWage(baseSalary, overtime, rate);
+// getWage(baseSalary, overtime, rate);
 
 // const user1 = {
 //   name: "User",
@@ -32,8 +32,6 @@ getWage(baseSalary, overtime, rate);
 //   },
 // };
 
-// employee.getWage();
-
 ////////////////////////////////////////////////
 
 /* 
@@ -42,13 +40,3 @@ getWage(baseSalary, overtime, rate);
   - Екземпляр
   - Інтерфейс
 // */
-
-// class Car{
-//   //speed
-//   //model
-//   price
-//   //type
-// }
-
-// let car1 = new Car();
-// let car2 = new Car();

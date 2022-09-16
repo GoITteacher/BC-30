@@ -1,24 +1,23 @@
 //Прототипне наслідування
 
+// Object;
+
+// const baseAnimal = {
+//   eyes: 2,
+// };
+
 // const animal = {
+//   __proto__: baseAnimal,
 //   legs: 4,
 // };
 
 // const dog = Object.create(animal);
-// dog.name = "Манго";
-
-// dog.hasOwnProperty("name"); // true
-// dog.hasOwnProperty("legs"); // false
-// /*
-// dog = {
-//   __proto__: animal,
-//   name: 'Mango'
-// }
-// */
+// dog.name = 'Манго';
 
 // console.log(dog); // { name: 'Манго', __proto__: animal }
-// console.log(animal.isPrototypeOf(dog)); // true
+// console.log(baseAnimal.isPrototypeOf(dog)); // true
 // console.log(dog.isPrototypeOf(animal)); // false
+// console.log(dog.eyes);
 
 // dog.isPrototypeOf(animal);
 /* 
