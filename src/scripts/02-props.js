@@ -1,12 +1,12 @@
-let myBtn = document.querySelector("#testButton");
+let myBtn = document.querySelector('#testButton');
 let imgElem = document.querySelectorAll("img[data-userName = 'Test']");
 
-console.log(imgElem);
+myBtn.addEventListener('click', onBtnClick);
 
-myBtn.addEventListener("click", () => {
-  imgElem.removeAttribute("key");
+function onBtnClick() {
+  imgElem.removeAttribute('key');
   console.log(imgElem.dataset);
-});
+}
 
 /* 
 elem.hasAttribute(name) - перевіряє наявність атрибута, повертає true або false.

@@ -1,14 +1,9 @@
-let myBtn = document.querySelector("#testButton");
-let listItem = document.querySelector(".list-item");
+let myBtn = document.querySelector('#testButton');
+let listItem = document.querySelector('.list-item');
 
-myBtn.style.width = "100px";
+const callback = () => {};
 
-const callback = () => {
-  myBtn.style.width = `${parseInt(myBtn.style.width) + 10}px`;
-  console.log(myBtn.style.width);
-};
-
-myBtn.addEventListener("click", callback);
+myBtn.addEventListener('click', callback);
 
 /* 
 У властивості classList зберігається об'єкт з методами для роботи з класами елемента.

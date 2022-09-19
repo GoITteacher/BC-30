@@ -1,12 +1,7 @@
 let myBtn = document.querySelector('#testButton');
 let list = document.querySelector('ul');
 
-console.log(list.lastElementChild);
-
-const callback = () => {
-  let elems = document.querySelector('ul');
-  console.log(elems.parentNode.lastElementChild.innerHTML);
-};
+const callback = () => {};
 
 myBtn.addEventListener('click', callback);
 
