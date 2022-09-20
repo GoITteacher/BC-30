@@ -1,15 +1,11 @@
-let myBtn = document.querySelector("#testButton");
-let list = document.querySelector(".usernames");
+let myBtn = document.querySelector('#testButton');
+let list = document.querySelector('.usernames');
 
-let ulItem = document.createElement("ul");
-for (let i = 0; i < 5; i++) {
-  let liItem = document.createElement("li");
-  liItem.textContent = `Test - ${i}`;
-  ulItem.append(liItem);
-}
+const onBtnClick = () => {
+  list.remove();
+};
 
-list.parentElement.append(ulItem);
-list.remove();
+myBtn.addEventListener('click', onBtnClick);
 
 /* 
 Створення
@@ -27,4 +23,14 @@ document.createElement(tagName);
 /* 
 Видалення
 elem.remove();
+
+let ulItem = document.createElement("ul");
+for (let i = 0; i < 5; i++) {
+  let liItem = document.createElement("li");
+  liItem.textContent = `Test - ${i}`;
+  ulItem.append(liItem);
+}
+
+list.parentElement.append(ulItem);
+list.remove();
 */

@@ -1,11 +1,10 @@
 let myBtn = document.querySelector('#testButton');
-let imgElem = document.querySelectorAll("img[data-userName = 'Test']");
+let imgElem = document.querySelectorAll('img');
 
 myBtn.addEventListener('click', onBtnClick);
-
 function onBtnClick() {
-  imgElem.removeAttribute('key');
-  console.log(imgElem.dataset);
+  const firstElem = imgElem[0];
+  console.log(firstElem.attributes);
 }
 
 /* 
