@@ -12,3 +12,7 @@ const boxRef = document.querySelector('.js-box');
 // boxRef.addEventListener('mouseover', onMouseEnter);
 // boxRef.addEventListener('mouseout', onMouseLeave);
 // boxRef.addEventListener('mousemove', onMouseMove);
+
+boxRef.addEventListener('mousemove', e => {
+  if (e.ctrlKey) console.log(e);
+});
