@@ -13,27 +13,38 @@ let refs = {
   descendant: document.querySelector('.js-descendant'),
 };
 
-// refs.parrent.addEventListener("click", (event) => {
-//   console.log(
-//     `Target: ${event.target.dataset.value}`,
-//     `CurrentTarget: ${event.currentTarget.dataset.value}`
-//   );
-// });
+refs.parrent.addEventListener('click', e => {
+  console.log(
+    `Target: ${e.target.dataset.value}`,
+    `CurrentTarget: ${e.currentTarget.dataset.value}\n\n`,
+  );
+  e.stopPropagation();
+});
 
-// refs.child.addEventListener("click", (event) => {
-//   console.log(
-//     `Target: ${event.target.dataset.value}`,
-//     `CurrentTarget: ${event.currentTarget.dataset.value}`
-//   );
-//   event.stopPropagation();
-// });
+refs.child.addEventListener('click', e => {
+  console.log(
+    `Target: ${e.target.dataset.value}`,
+    `CurrentTarget: ${e.currentTarget.dataset.value}`,
+  );
+});
 
-// let COUNT_CLICK = 0;
-// document.body.addEventListener('click', () => {
-//   COUNT_CLICK++;
-//   console.log(COUNT_CLICK);
-// });
+refs.descendant.addEventListener('click', e => {
+  console.log(1);
+  //e.stopImmediatePropagation();
+});
 
-// refs.descendant.addEventListener('click', event => {
-//   event.stopPropagation();
-// });
+refs.descendant.addEventListener('click', e => {
+  console.log(2);
+  e.stopImmediatePropagation();
+});
+
+refs.descendant.addEventListener('click', e => {
+  console.log(3);
+  //e.stopImmediatePropagation();
+});
+
+let COUNT_CLICK = 0;
+document.body.addEventListener('click', () => {
+  COUNT_CLICK++;
+  console.log(COUNT_CLICK);
+});

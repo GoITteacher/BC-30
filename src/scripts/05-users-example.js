@@ -27,16 +27,17 @@ let refs = {
 // Функція завантажує дані про користувачів до списку
 function loadData() {
   let result = users.map(user => {
-    return ` 
+    return `
 <li class="user-card js-user-card" data-id=${user.id}>
   <div class="snip1344">
-      <img src="https://source.unsplash.com/100x100/?random=${user.id}&avatar,person,boy,girl" alt="profile-sample1" class="background"/>
-      <img src="https://source.unsplash.com/100x100/?random=${user.id}&avatar,person,boy,girl" alt="profile-sample1" class="profile"/>
-      <figcaption>
-        <h3>${user.name}<span>${user.phone}</span></h3>
-          <div>@${user.username}</div>
-      </figcaption>
-    </div>
+  <img src="https://source.unsplash.com/100x100/?random=${user.id}&avatar,person,boy,girl" alt="profile-sample1" class="background"/>
+  <img src="https://source.unsplash.com/100x100/?random=${user.id}&avatar,person,boy,girl" alt="profile-sample1" class="profile"/>
+  <figcaption>
+    <h3>${user.name}<span>${user.phone}</span></h3>
+      <div>@${user.username}</div>
+  </figcaption>
+</div>
+
 </li>
 `;
   });
