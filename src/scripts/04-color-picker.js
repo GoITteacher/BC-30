@@ -22,7 +22,7 @@ function getRangomColor() {
 function getRandomHex() {
   return Math.round(Math.random() * 256)
     .toString(16)
-    .padStart(2, "0");
+    .padStart(2, '0');
 }
 
 function hexToRgb(hex) {
@@ -35,45 +35,22 @@ function hexToRgb(hex) {
 createPaletteItems();
 ////////////////////////////////////////////////////////////////////////////
 let refs = {
-  itemList: document.querySelector(".js-colors-box"),
-  modalElement: document.querySelector(".modal"),
-  btnReloadColor: document.querySelector(".js-reload-color"),
+  itemList: document.querySelector('.js-colors-box'),
+  modalElement: document.querySelector('.modal'),
+  btnReloadColor: document.querySelector('.js-reload-color'),
 };
 
 function loadColorPallet() {
-  createPaletteItems();
-  const pallete = colorPalette
-    .map(({ hex, rgb }) => {
-      return `<li class="color-item">
-  <button class="color-body" style="background-color:${hex}";></button>
-  <div class="color-footer">
-      <div>HEX: ${hex}</div>
-      <div>RGB: ${rgb}</div>
-      <div></div>
-  </div>
-</li>`;
-    })
-    .join("");
-
+  let pallete = '';
+  /* 
+  ...
+  */
   refs.itemList.innerHTML = pallete;
 }
-
 loadColorPallet();
-refs.itemList.addEventListener("click", (even) => {
-  if (even.target.nodeName !== "BUTTON") return;
-  document.body.classList.add("show-modal");
-  refs.modalElement.style.backgroundColor = even.target.style.backgroundColor;
-  function onBodyKeydown(eve) {
-    if (eve.code === "Escape") {
-      document.body.classList.remove("show-modal");
-      document.removeEventListener("keydown", onBodyKeydown);
-    }
-  }
-  document.addEventListener("keydown", onBodyKeydown);
-});
 
-refs.btnReloadColor.addEventListener("click", call);
-function call(even) {
+refs.btnReloadColor.addEventListener('click', call);
+function call() {
   loadColorPallet();
 }
 
