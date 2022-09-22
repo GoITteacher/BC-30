@@ -1,25 +1,25 @@
 // users, posts, comments, albums, photos
 //Посилання на необхідні елементи
 const refs = {
-  inputUserFilter: document.querySelector("#user-filter"),
-  outputUserFilter: document.querySelector("#outputInput"),
-  userList: document.querySelector(".js-list-user"),
-  postList: document.querySelector(".js-list-post-body"),
-  btnOpenModal: document.querySelector("#open-modal"),
-  backdrop: document.querySelector(".backdrop"),
-  modalForm1: document.querySelector(".js-modal-1"),
-  modalForm2: document.querySelector(".js-modal-2"),
-  commentsListEl: document.querySelector(".js-list-post-comment"),
+  inputUserFilter: document.querySelector('#user-filter'),
+  outputUserFilter: document.querySelector('#outputInput'),
+  userList: document.querySelector('.js-list-user'),
+  postList: document.querySelector('.js-list-post-body'),
+  btnOpenModal: document.querySelector('#open-modal'),
+  backdrop: document.querySelector('.backdrop'),
+  modalForm1: document.querySelector('.js-modal-1'),
+  modalForm2: document.querySelector('.js-modal-2'),
+  commentsListEl: document.querySelector('.js-list-post-comment'),
 };
 
 // Завантажую(Відображаю на сторінці) список користувачів
 showFilteredUsers(users);
 
 //Створюю прослуховувач події на інпуті
-refs.inputUserFilter.addEventListener("input", _.debounce(onInputChange, 300));
+refs.inputUserFilter.addEventListener('input', _.debounce(onInputChange, 300));
 // Колбек для прослуховувача (Фільтрує мавсссив користувачів)
 function onInputChange(event) {
-  const filteredUsers = users.filter((user) => {
+  const filteredUsers = users.filter(user => {
     return user.name.includes(event.target.value);
   });
 
@@ -30,24 +30,24 @@ function onInputChange(event) {
 //Фукнція відображенння отриманого массиву коритсувачів
 function showFilteredUsers(users) {
   let result = users
-    .map((use) => {
+    .map(use => {
       return `
       <li class="user-card" data-idUser="${use.id}">
        ${use.name}
       </li>
       `;
     })
-    .join(""); // Перетворення массиву на розмітку ХТМЛ
+    .join(''); // Перетворення массиву на розмітку ХТМЛ
 
   refs.userList.innerHTML = result;
-  refs.btnOpenModal = document.querySelector("#open-modal");
+  refs.btnOpenModal = document.querySelector('#open-modal');
 }
 
 // Прослуховувач подій клік на Списку користувачів
-refs.userList.addEventListener("click", onUserClick);
+refs.userList.addEventListener('click', onUserClick);
 //Колбек для прослуховувача
 function onUserClick(event) {
-  if (event.target.nodeName === "LI") {
+  if (event.target.nodeName === 'LI') {
     //Якщо клацнули по карточці Юзера
 
     //Отримуємо айді цього юзера
@@ -75,7 +75,7 @@ function updateListAlbums(idUser) {
   });
 
   // Отримуємо розмітку у вигляді цільного рядка
-  let result = htmlPosts.join("");
+  let result = htmlPosts.join('');
 
   // Відображаємо цю розмітку на сторінці
   refs.postList.innerHTML = result;
@@ -94,31 +94,31 @@ function updateListPosts(idUser) {
         </li>`;
   });
 
-  let result = htmlPosts.join("");
+  let result = htmlPosts.join('');
   refs.postList.innerHTML = result;
 }
 
 // Додавання прослуховувача події на список постів (щоб відкривати модалку)
-refs.postList.addEventListener("click", onListItemClick);
+refs.postList.addEventListener('click', onListItemClick);
 
 // Колбек для прослуховувача
 function onListItemClick(event) {
   // Перевірка якщо клік саме по альбому
   let myTarget = event.target;
   if (
-    !event.target.matches(".list-post-body") &&
-    !event.target.matches(".post-item")
+    !event.target.matches('.list-post-body') &&
+    !event.target.matches('.post-item')
   )
-    myTarget = event.target.closest(".post-item");
+    myTarget = event.target.closest('.post-item');
 
-  if (myTarget.nodeName === "LI") {
+  if (myTarget.nodeName === 'LI') {
     let albumId = myTarget.dataset.id;
 
     if (myTarget.children.length === 1) {
       // Додаю необхідні класи для відображення модалки
-      document.body.classList.add("show-modal");
-      refs.modalForm2.classList.add("visible");
-      refs.modalForm1.classList.remove("visible");
+      document.body.classList.add('show-modal');
+      refs.modalForm2.classList.add('visible');
+      refs.modalForm1.classList.remove('visible');
 
       // Отримую данні обраного альбому
       let title = myTarget.children[0].textContent;
@@ -132,7 +132,7 @@ function onListItemClick(event) {
 }
 
 function showComments(postId) {
-  let filteredComments = comments.filter((comment) => {
+  let filteredComments = comments.filter(comment => {
     return comment.postId == postId;
   });
   refs.commentsListEl.innerHTML = filteredComments
@@ -144,48 +144,48 @@ function showComments(postId) {
           </li>
     `;
     })
-    .join("");
+    .join('');
 }
 
 // Фукнція відображення альбому в модальному вікні
 function loadAlbumDataToModal(title, albumId) {
-  let filteredListPhoto = photos.filter((photo) => {
+  let filteredListPhoto = photos.filter(photo => {
     return photo.albumId == Number(albumId);
   });
   refs.modalForm2.children[0].textContent = title;
   refs.modalForm2.children[1].innerHTML = filteredListPhoto
-    .map((elem) => {
-      return ` <img class='list-photo-item lazyload' src="${elem.thumbnailUrl}" data-src="${elem.url}">`;
+    .map(elem => {
+      return ` <img class='list-photo-item' src="${elem.thumbnailUrl}">`;
     })
-    .join("");
+    .join('');
 }
 
 // Прослуховувач подій на кнопці для створення нового юзера (Відкриває модальне вікно реєстрації)
-refs.btnOpenModal.addEventListener("click", (event) => {
+refs.btnOpenModal.addEventListener('click', event => {
   event.stopPropagation(); //Зупиняє всплиття події на верх (до батька не дійде)
-  document.body.classList.add("show-modal");
-  refs.modalForm1.classList.add("visible");
-  refs.modalForm2.classList.remove("visible");
+  document.body.classList.add('show-modal');
+  refs.modalForm1.classList.add('visible');
+  refs.modalForm2.classList.remove('visible');
 });
 
 // Прослуховувач подій на бекдроп для закриття модалок
-refs.backdrop.addEventListener("click", (event) => {
+refs.backdrop.addEventListener('click', event => {
   //якщо клацаю за межами модалки то
   if (event.target === event.currentTarget)
     // закриваю модалку видаливши клас
-    document.body.classList.remove("show-modal");
+    document.body.classList.remove('show-modal');
 });
 
-refs.commentsListEl.addEventListener("mouseover", onCommentsListMouseOver);
-refs.commentsListEl.addEventListener("mouseout", onCommentsListMouseOut);
+refs.commentsListEl.addEventListener('mouseover', onCommentsListMouseOver);
+refs.commentsListEl.addEventListener('mouseout', onCommentsListMouseOut);
 
 function onCommentsListMouseOver(event) {
   console.log(refs.postList.style.height);
-  refs.postList.style.height = "100px";
-  event.currentTarget.style.height = "300px";
+  refs.postList.style.height = '100px';
+  event.currentTarget.style.height = '300px';
 }
 
 function onCommentsListMouseOut(event) {
-  refs.postList.style.height = "300px";
-  event.currentTarget.style.height = "100px";
+  refs.postList.style.height = '300px';
+  event.currentTarget.style.height = '100px';
 }

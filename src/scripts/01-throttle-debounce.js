@@ -5,24 +5,8 @@ let outputElem = document.querySelector('.js-output');
 let countMouseEvent = 0;
 let countInputEvent = 0;
 
-// let throttleFun = _.throttle(onMouseMove, 3000, {
-//   leading: false,
-//   trailing: false,
-// });
-// let debounceFun = _.debounce(onMouseMove);
-// document.addEventListener("mousemove", throttleFun);
+document.addEventListener('mousemove', onMouseMove);
 
-// function onMouseMove() {
-//   countMouseEventElement.innerHTML = ++countMouseEvent;
-// }
-
-function onInputChange(event) {
-  outputElem.innerHTML = event.target.value;
+function onMouseMove() {
+  countMouseEventElement.innerHTML = ++countMouseEvent;
 }
-const debounceFun = _.debounce(onInputChange, 5000, {
-  leading: true,
-  maxWait: 100,
-  trailing: false,
-});
-
-inputElement.addEventListener('input', debounceFun);
