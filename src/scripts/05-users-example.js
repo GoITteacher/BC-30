@@ -16,7 +16,7 @@ const refs = {
 showFilteredUsers(users);
 
 //Створюю прослуховувач події на інпуті
-refs.inputUserFilter.addEventListener('input', _.debounce(onInputChange, 300));
+refs.inputUserFilter.addEventListener('input', _.debounce(onInputChange, 1000));
 // Колбек для прослуховувача (Фільтрує мавсссив користувачів)
 function onInputChange(event) {
   const filteredUsers = users.filter(user => {
@@ -152,10 +152,11 @@ function loadAlbumDataToModal(title, albumId) {
   let filteredListPhoto = photos.filter(photo => {
     return photo.albumId == Number(albumId);
   });
+
   refs.modalForm2.children[0].textContent = title;
   refs.modalForm2.children[1].innerHTML = filteredListPhoto
     .map(elem => {
-      return ` <img class='list-photo-item' src="${elem.thumbnailUrl}">`;
+      return `<img class='list-photo-item lazyload' src="${elem.thumbnailUrl}" data-src="${elem.url}" width="100" height="100">`;
     })
     .join('');
 }
