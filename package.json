@@ -1,19 +1,28 @@
 {
-  "name": "bc-30",
-  "version": "1.0.0",
+  "name": "project_name",
+  "version": "2.0.0",
   "description": "",
-  "main": "index.js",
+  "homepage": "https://your_username.github.io/your_repo_name",
   "scripts": {
-    "push": "git add . && git commit -m 'init'"
+    "start": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /your_repo_name/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/GoITteacher/BC-30.git"
+    "url": "git+https://github.com/your_username/your_repo_name.git"
   },
-  "author": "",
+  "keywords": [],
+  "author": "********* <*********>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/GoITteacher/BC-30/issues"
+    "url": "git+https://github.com/your_username/your_repo_name.git"
   },
-  "homepage": "https://github.com/GoITteacher/BC-30#readme"
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
+    "parcel": "^2.6.0",
+    "parcel-reporter-clean-dist": "^1.0.4",
+    "posthtml-include": "^1.7.4"
+  },
+  "browserslist": "last 10 versions",
+  "type":"module"
 }
