@@ -23,7 +23,7 @@
   - инициализация и package.json
   - [npmjs.com](https://www.npmjs.com/)
   - работа с пакетами
-    - установка
+    - установка (https://www.npmjs.com/package/uniqid)(https://www.npmjs.com/package/date-fns)
     - удаление
   - npm-скрипты
     - pre и post
