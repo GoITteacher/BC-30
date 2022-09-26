@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "parcel src/*.html",
+    "build": "parcel build src/*.html --public-url /BC-30/",
     "push": "git add . && git commit -m 'init'"
   },
   "repository": {
@@ -15,5 +17,12 @@
   "bugs": {
     "url": "https://github.com/GoITteacher/BC-30/issues"
   },
-  "homepage": "https://github.com/GoITteacher/BC-30#readme"
+  "homepage": "https://github.com/GoITteacher/BC-30#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-handlebars-precompile": "^1.0.2"
+  },
+  "dependencies": {
+    "lodash.throttle": "^4.1.1"
+  }
 }
