@@ -1,1 +1,14 @@
-# BC-30
+# Promises
+- Promise API
+  - Promise.prototype.then(result)
+  - Promise.prototype.catch(error)
+  - Promise.prototype.finally()
+  - [Другие методы Промисов](https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+- Цепочки промисов
+- Промисификация функций
+- Статические методы:
+  - Promise.all()
+  - Promise.race()
+- Доп. материал:
+  - [Промисы на примере бургер-вечеринки](https://habr.com/ru/company/nix/blog/323066/)
+  - [У нас проблемы с промисами](https://habr.com/ru/company/mailru/blog/269465/)
