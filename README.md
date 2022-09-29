@@ -47,3 +47,4 @@
 - [DNS](https://selectel.ru/blog/dns-server/)
 - [Презентация](https://drive.google.com/file/d/1KcDIQuyn2IBwESAjg96hH-nniozG3L3W/view?usp=sharing)
 - [Версии HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
+- [SPECS](https://rapidapi.com/pgamerxdev/api/random-stuff-api/specs)
