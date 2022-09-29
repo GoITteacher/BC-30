@@ -42,4 +42,8 @@
   - Хранение API ключей и секретов
   - [https://lpj-weather-service.herokuapp.com/](https://lpj-weather-service.herokuapp.com/)
 
-## [Презентация](https://drive.google.com/file/d/1KcDIQuyn2IBwESAjg96hH-nniozG3L3W/view?usp=sharing)
+---
+## Доп Мат
+- [DNS](https://selectel.ru/blog/dns-server/)
+- [Презентация](https://drive.google.com/file/d/1KcDIQuyn2IBwESAjg96hH-nniozG3L3W/view?usp=sharing)
+- [Версии HTTP](https://developer.mozilla.org/ru/docs/Web/HTTP/Basics_of_HTTP/Evolution_of_HTTP)
