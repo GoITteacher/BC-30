@@ -19,6 +19,7 @@
   "homepage": "https://github.com/GoITteacher/BC-30#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-handlebars-precompile": "^1.0.2"
+    "parcel-plugin-handlebars-precompile": "^1.0.2",
+    "posthtml-include": "^1.7.4"
   }
 }
