@@ -1,11 +1,5 @@
 # Library
 
-- AXIOS
-- EXAMPLES
-- PAGINATION
-
-
-
 
 ```js
 const user = {

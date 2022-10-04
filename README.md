@@ -1,12 +1,5 @@
 # ПЛАН
 
-1. Kahoot
-1. Postman
-1. CRUD
-1. FETCH and AXIOS
-
----
-
 - Пакет [json-server](https://github.com/typicode/json-server)
 - Postman
 - Работа с приватным API
