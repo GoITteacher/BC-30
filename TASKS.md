@@ -16,9 +16,9 @@ const user = {
 ```js
 const Books = {
   id: Number,
-  name: String,
+  title: String,
   author: String,
-  description: String,
+  desc: String,
 };
 ```
 
