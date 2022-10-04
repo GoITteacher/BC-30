@@ -1,3 +1,3 @@
-import { UsersApi } from "./modules/usersAPI";
+import { UsersApi } from './modules/usersAPI.js';
 
 const usersApi = new UsersApi();

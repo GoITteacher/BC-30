@@ -1,1 +1,1 @@
-import "../css/common";
+import '../css/common.css';
