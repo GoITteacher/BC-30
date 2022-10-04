@@ -1,7 +1,7 @@
 # ПЛАН
 
 1. Kahoot
-1. Postman
 1. Pagination
-1. FETCH and AXIOS
+1. Postman
+1. FETCH and [AXIOS](https://github.com/axios/axios)
 

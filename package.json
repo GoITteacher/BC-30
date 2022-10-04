@@ -21,5 +21,8 @@
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-handlebars-precompile": "^1.0.2",
     "posthtml-include": "^1.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
   }
 }
