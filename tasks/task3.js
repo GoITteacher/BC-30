@@ -1,9 +1,8 @@
 let elem = {
-  value: "Привіт",
+  value: 'Привіт',
 };
 
 function func(surname, name) {
-  //console.log(this);
   let obj1 = {
     foo: () => {
       console.log(this);
@@ -13,7 +12,5 @@ function func(surname, name) {
   return obj1.foo;
 }
 
-const myFunc = func("Иванов", "Иван");
+const myFunc = func.apply(elem, ['Vasya', 'Vasya1']);
 myFunc();
-
-func.apply(elem, ["Vasya", "Vasya1"]);

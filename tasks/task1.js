@@ -1,5 +1,5 @@
 let elem = {
-  value: "123",
+  value: '123',
 };
 
 function func(a, b) {

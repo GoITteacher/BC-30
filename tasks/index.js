@@ -10,18 +10,13 @@
 // user.func();
 
 // =========================================
-let obj1 = {
-  func() {
-    return function () {
-      console.log(this);
-    };
-  },
+/*
+const obj2 = {
+  name: 'awdawd',
 };
 
-const newFunc = obj1.func();
-newFunc.call(obj1);
-// =========================================
-let obj2 = {
+let obj1 = {
+  name: 'obj1',
   func() {
     return () => {
       console.log(this);
@@ -29,16 +24,32 @@ let obj2 = {
   },
 };
 
-const newFunc2 = obj2.func();
-newFunc2.call(obj2);
+const foo = obj1.func;
+const newFunc = foo();
+
+newFunc();
+
+*/
 // =========================================
 
-/* function sayHi() {
-  arguments.join = [].join;
+// const obj1 = {
+//   name: 'obj1',
+//   func() {
+//     return () => {
+//       console.log(this);
+//     };
+//   },
+// };
 
-  let argStr = arguments.join(":");
+// let obj2 = {
+//   name: 'obj2',
+//   func() {
+//     return () => {
+//       console.log(this);
+//     };
+//   },
+// };
 
-  console.log(arguments);
-}
-
-sayHi(1, 2, 3); */
+// const newFunc2 = obj1.func().bind(obj2);
+// newFunc2.call(obj2);
+// =========================================
